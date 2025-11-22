@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Configurações Básicas do Usuário */
+body {
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+/* Header Customizado (Adaptado para não quebrar o Flexbox do React) */
+header.custom-header {
+    background-color: #ffffff;
+    border-bottom: 3px solid #007bff;
+    margin-bottom: 20px;
+    /* Padding ajustado via Tailwind classes no componente para manter responsividade */
+}
+
+h1.custom-title {
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+.container-custom {
+    max-width: 1280px; /* Mantendo largura para o preview lateral */
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Estilo das Seções */
+.form-section {
+    background-color: #ffffff;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    scroll-margin-top: 100px; /* Para rolagem suave não ficar escondida pelo header */
+}
+
+.form-section h2 {
+    color: #0056b3;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Estilo dos Inputs (Aplicado globalmente ou via classes utilitárias) */
+.custom-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.2s;
+}
+
+.custom-input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+textarea.custom-input {
+    resize: vertical;
+}
+
+/* Layout em Grid para Dados Pessoais */
+.form-group-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+@media (min-width: 768px) {
+    .form-group-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Estilos para Itens Repetíveis */
+.experiencia-item, .educacao-item {
+    border: 1px dashed #cccccc;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+.data-group {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+@media (min-width: 640px) {
+    .data-group {
+        flex-direction: row;
+    }
+}
+
+.data-group input {
+    flex-grow: 1;
+}
+
+.add-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s;
+}
+
+.add-button:hover {
+    background-color: #218838;
+}
+
+/* Upload de Arquivo */
+.file-upload-group {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px dashed #007bff;
+    border-radius: 5px;
+    background-color: #f8fbff;
+}
+
+.file-upload-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #0056b3;
+}
+
+/* Botões de Ação */
+.action-btn {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: filter 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.action-btn:hover {
+    filter: brightness(0.9);
+}
+
+.btn-download {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-preview {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.btn-save {
+    background-color: #007bff;
+    color: white;
+}
